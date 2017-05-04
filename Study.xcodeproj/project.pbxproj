@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1B109E2A1EB5FE3900C9D651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B109E291EB5FE3900C9D651 /* AppDelegate.swift */; };
-		1B109E2C1EB5FE3900C9D651 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B109E2B1EB5FE3900C9D651 /* ViewController.swift */; };
 		1B109E2F1EB5FE3900C9D651 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B109E2D1EB5FE3900C9D651 /* Main.storyboard */; };
 		1B109E311EB5FE3900C9D651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B109E301EB5FE3900C9D651 /* Assets.xcassets */; };
 		1B109E341EB5FE3900C9D651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B109E321EB5FE3900C9D651 /* LaunchScreen.storyboard */; };
 		1B109E3F1EB5FE3900C9D651 /* StudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B109E3E1EB5FE3900C9D651 /* StudyTests.swift */; };
 		1B109E4A1EB5FE3900C9D651 /* StudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B109E491EB5FE3900C9D651 /* StudyUITests.swift */; };
+		1B109E591EB81C3900C9D651 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B109E581EB81C3900C9D651 /* MapKit.framework */; };
+		1B109E5B1EB838EC00C9D651 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B109E2B1EB5FE3900C9D651 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1B109E451EB5FE3900C9D651 /* StudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B109E491EB5FE3900C9D651 /* StudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUITests.swift; sourceTree = "<group>"; };
 		1B109E4B1EB5FE3900C9D651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B109E581EB81C3900C9D651 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B109E591EB81C3900C9D651 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				1B109E3D1EB5FE3900C9D651 /* StudyTests */,
 				1B109E481EB5FE3900C9D651 /* StudyUITests */,
 				1B109E271EB5FE3900C9D651 /* Products */,
+				1B109E571EB81C3900C9D651 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				1B109E4B1EB5FE3900C9D651 /* Info.plist */,
 			);
 			path = StudyUITests;
+			sourceTree = "<group>";
+		};
+		1B109E571EB81C3900C9D651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B109E581EB81C3900C9D651 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +205,13 @@
 				TargetAttributes = {
 					1B109E251EB5FE3800C9D651 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3AGJFCJYFG;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					1B109E391EB5FE3900C9D651 = {
 						CreatedOnToolsVersion = 8.1;
@@ -259,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B109E2C1EB5FE3900C9D651 /* ViewController.swift in Sources */,
+				1B109E5B1EB838EC00C9D651 /* ViewController.swift in Sources */,
 				1B109E2A1EB5FE3900C9D651 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3AGJFCJYFG;
 				INFOPLIST_FILE = Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lebronlee.Study;
@@ -422,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3AGJFCJYFG;
 				INFOPLIST_FILE = Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lebronlee.Study;
@@ -503,6 +523,7 @@
 				1B109E501EB5FE3900C9D651 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B109E511EB5FE3900C9D651 /* Build configuration list for PBXNativeTarget "StudyTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +532,7 @@
 				1B109E531EB5FE3900C9D651 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B109E541EB5FE3900C9D651 /* Build configuration list for PBXNativeTarget "StudyUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +541,7 @@
 				1B109E561EB5FE3900C9D651 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
